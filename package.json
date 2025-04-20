@@ -1,0 +1,41 @@
+{
+    "name": "mf-generator",
+    "displayName": "Micro-Frontend Structure Generator",
+    "description": "Generates Micro-Frontend scaffolding structure",
+    "icon": "./assets/ob-insurance.png",
+    "version": "1.0.1",
+    "publisher": "whiteformed",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/whiteformed/mf-generator"
+    },
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:mf-generator.createMicroFrontend"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "mf-generator.createMicroFrontend",
+                "title": "Create Micro-Frontend"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.7",
+        "@types/vscode": "^1.75.0",
+        "typescript": "^4.7.2"
+    }
+}
